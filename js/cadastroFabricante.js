@@ -54,21 +54,24 @@ async function cadastrarFabricante() {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
-            nome: txtnome,
-            cnpj: txtcnpj,
-            cidade: txtcidade,
-            estado: txtestado,
+            nome: txtnome.value,
+            cnpj: txtcnpj.value,
+            cidade: txtcidade.value,
+            estado: txtestado.value
 
         })
     };
+
+    //const despesaUsuario = await fetch('http://localhost:8080/controle-gastos/rest/despesa/cadastrar', options);
+    //const despesaJson = await despesaUsuario.json();
+
     const despesaUsuario = await fetch(url, options);
     const despesaJson = await despesaUsuario.json().then((data) => {
         console.log('Resposta:', data);
     })
-        .catch((error) => {
-            console.error('Erro:', error);
-        });
+    .catch((error) => {
+        console.error('Erro:', error);
+    });
 }
-
 
 
