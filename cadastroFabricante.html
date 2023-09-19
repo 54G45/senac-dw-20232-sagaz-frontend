@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/cadastroFabricante.js"></script>
+    <title>Cadastrar Fabricantes</title>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Cadastro de Fabricante</h1>
+        <p class="cabecalho__texto">Informe os dados do seu endereço</p>
+    </header>
+    <main class="principal">
+        <section class="section__menu">
+            <aside class="section__menu__aside">
+                <p class="section__menu__aside__titulo"><a href="/index.html">Voltar ao início</a></p>
+            </aside>
+        </section>
+
+        <section class="section__principal">
+            <form class="formulario" id="formulario">
+
+                <div>
+
+                    <div>
+                        <label class="formulario__texto" for="nome">Nome:</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="nome" name="nome"
+                            required />
+                    </div>
+                    <div>
+                        <label class="formulario__texto" for="cnpj">CNPJ:</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="cnpj" name="cnpj"
+                            required />
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <legend>Consulta de CEP</legend>
+                    <div>
+                        <label class="formulario__texto" for="cep">Informe o CEP: </label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="cep" name="cep"
+                            minlength="8" required />
+                    </div>
+                    <div>
+                        <label class="formulario__texto"></label>
+                        <button class="formulario__fieldset__botao" type="button" onclick="buscarCEP()">Buscar
+                            CEP</button>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div>
+                        <label class="formulario__texto" for="cidade">Cidade:</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="cidade" name="cidade"
+                            required />
+                    </div>
+
+                    <div>
+                        <label class="formulario__texto" for="estado">Estado:</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="estado" name="estado"
+                            required />
+                    </div>
+
+
+                    <div>
+                        <button class="formulario__fieldset__botao" type="button" onclick="cadastrarFabricante()">Cadastrar</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <table>
+            <thead>
+                <th>#</th>
+                <th>Nome</th>
+                <th>CHPJ</th>
+                <th>Cidade</th>
+                <th>CEP</th>
+                <th>UF</th>
+            </thead>
+            <tbody id="corpoTabela">
+
+            </tbody>
+        </table>
+
+    </main>
+
+</body>
+
+</html>
