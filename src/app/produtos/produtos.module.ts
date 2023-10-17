@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,6 +12,7 @@ import { ProdutoListagemComponent } from './produto-listagem/produto-listagem.co
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ProdutosRoutingModule
   ]
 })
