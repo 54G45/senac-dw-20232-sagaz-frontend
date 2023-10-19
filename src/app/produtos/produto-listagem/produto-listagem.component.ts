@@ -35,8 +35,9 @@ export class ProdutoListagemComponent implements OnInit {
 
   }
 
-  editar(id: number){
+  editar(id: number){}
 
-  }
+pesquisar(){}
+limpar(){}
 
 }
